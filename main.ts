@@ -91,4 +91,41 @@ for (let name of friends_list) {
   console.log(`Hello ${name} would you like to learn some typesript today?`);
 }
 
+// DAY 5
+
+//13) Your Own Array: Think of your favorite mode of transportation, such as a motorcycle or a car, and make a list that stores several
+// examples. Use your list to print a series of statements about these items, such as “I would like to own a Honda motorcycle.”
+
+let transportation: string[] = ["car", "bike", "train", "bus"];
+for (let trans of transportation) {
+  console.log(`i would like to own ${trans}`);
+}
+
+//14) Guest List: If you could invite anyone, living or deceased, to dinner, who would you invite?
+// Make a list that includes at least three people you’d like to invite to dinner. Then use your 
+//list to print a message to each person, inviting them to dinner.
+
+let Guest: string[] = ["sarfraz", "sajjad", "muzammil", "danish"];
+Guest.forEach((guest) => {
+  console.log(
+    `Dear Mr. ${guest} I would like to invite you to dinner at ABC Restaurant`
+  );
+});
+
+//15) Changing Guest List: You just heard that one of your guests can’t make the dinner, 
+//so you need to send out a new set of invitations. You’ll have to think of someone else to invite.
+
+let unable_to_attend = "sajjad";
+console.log(`${unable_to_attend} can't make to dinner. `);
+
+let new_guest: string = "ahsan"; //new guest
+Guest[Guest.indexOf(unable_to_attend)] = new_guest;
+
+//new invitation
+Guest.forEach((guest) => {
+  console.log(
+    `Dear Mr. ${guest} I would like to invite you to dinner at ABC Restaurant`
+  );
+});
+
 
