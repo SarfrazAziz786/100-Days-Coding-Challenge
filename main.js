@@ -22,3 +22,19 @@ console.log(`${famous_person}, ${quote}`);
 person_name = "\tsarfraz aziz\n";
 console.log(person_name);
 console.log(person_name.trim());
+//DAY 3
+//7)Number Eight: Write addition, subtraction, multiplication, and division operations that each result in the number 8. 
+//Be sure to enclose your operations in print statements to see the results.
+console.log(5 + 3); // Addition
+console.log(10 - 2); // Subtraction
+console.log(4 * 2); // Multiplication
+console.log(16 / 2); // Division
+//8) Question 8: You should create four lines that look like this:console.log(5 + 3)
+console.log(5 + 3);
+console.log(5 + 3);
+console.log(5 + 3);
+console.log(5 + 3);
+//9) Favorite Number: Store your favorite number in a variable. Then, using that variable, create a message that reveals your favorite number.
+// Print that message.
+let favorite_number = 7;
+console.log(`My favorite number is "${favorite_number}"`);
