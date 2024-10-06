@@ -1641,3 +1641,442 @@ console.log(`Your grade is ${grade1(80)}`)
 
 
 
+// Question 111
+// Use an if-else-if chain to categorize a persons age group (child, teenager, adult).
+console.log("\n")
+function categorizePerson(age : number):string{
+  if (age<13){
+    return "child"
+  }else if (age<=19){
+    return "Teenager"
+  }else{
+    return "Adult"
+  }
+}
+
+console.log(categorizePerson(10));
+console.log(categorizePerson(19));
+console.log(categorizePerson(29));
+
+// Day 38
+// Question 112
+// Create a Map that stores the names of countries as keys and their capitals as values. Add three countries to the Map.
+console.log("\n") 
+const country=new Map<string,string>()   
+country.set("Pakistan", "karachi")
+country.set("Japan", "Tokyo")
+country.set("France", "Paris")
+console.log(country);
+
+
+
+// Question 113
+// Write a function that checks if a Map contains a key for `Canada` and logs the capital if it exists.
+console.log("\n") 
+
+country.set("canada", "Ottawa")
+
+function checkCapital(val:string){
+   if(country.has(val)){
+    return `The capital of ${val} is ${country.get(val)}`
+   }else{
+    return "does not exist in country list";
+   }
+}
+
+
+console.log(checkCapital("canada"));
+
+
+// Question 114
+// Iterate over a Map of student IDs and names, and log each pair to the console.
+console.log("\n") 
+const stuData=new Map()
+stuData.set(1 , "sarfraz")
+stuData.set(2 , "fraz")
+stuData.set(3 , "saif")
+
+stuData.forEach((name, id)=>{
+  console.log(`Student id ${id} and Name: ${name}`);
+  
+})
+
+// Day 39
+// Question 115
+// Use a switch statement to log the days of the week based on a number (1-7).
+console.log("\n") 
+function weekday(day:number){
+  switch(day){
+    case 1:
+        console.log("Sunday");
+        break;
+    case 2:
+        console.log("Monday");
+        break;
+    case 3:
+        console.log("Tuesday");
+        break;
+    case 4:
+        console.log("Wednesday");
+        break;
+    case 5:
+        console.log("Thursday");
+        break;
+    case 6:
+        console.log("Friday");
+        break;
+    case 7:
+        console.log("Saturday");
+        break;
+    default:
+        console.log("invalid day number");
+        break;
+      
+  }
+}
+
+weekday(1)
+
+// Question 116
+// Create a switch case that matches several cases to the same code block, representing seasons.
+console.log("\n") 
+
+let seasons=(month:number)=>{
+  switch(month){
+    case 12:
+    case 1:
+    case 2:
+  console.log("Winter");
+  break;
+    case 3:
+    case 4:
+    case 5:
+  console.log("Spring");
+  break;
+    case 6:
+    case 7:
+    case 8:
+  console.log("Summer");
+  break;
+    case 9:
+    case 10:
+    case 11:
+  console.log("Fall");
+  break;
+  default:
+    console.log("Invalid Month");
+    break
+  }
+}
+
+seasons(3)
+
+
+
+// Question 117
+// Implement a switch statement that evaluates an expression and uses the default case if none of the cases match.
+console.log("\n") 
+
+function gradeExpression(grade:string){
+  switch (grade){
+    case "A":
+    console.log("Exellent");
+    break
+    case "B":
+    console.log("Good");
+    break
+    case "C":
+    console.log("Fair");
+    break
+    case "D":
+    console.log("Poor");
+    break
+    default:
+    console.log("Fail");
+    break
+    
+  }
+}
+
+
+gradeExpression("A")
+
+// Day 40
+// Question 118
+// Write a loop that logs numbers from 1 to 10 to the console
+console.log("\n");
+
+(function numb(){
+
+for (let i = 1; i <11 ; i++) {
+  console.log(i);
+  
+}
+})()
+
+
+// Question 119
+// Create a while loop that logs `Hello, World!` 5 times.
+console.log("\n");
+let i=0
+while (i<10) {
+  console.log("Hello World");
+  i++
+}
+
+// Question 120
+// Use a for...of loop to iterate through an array of your favorite movies and log each one.
+console.log("\n");
+let favMovies:string[]=["Kingkong", "Superman" , "Spiderman"]
+for (const movie of favMovies) {
+  console.log(movie);
+}
+
+// Day 41
+// Question 121
+// Implement a for loop that counts from 1 to 10 but skips number 5 using the continue statement.
+console.log("\n");
+
+for (let i = 1; i < 11; i++) {
+  if (i===5){
+    continue;     //skip 5 
+  }  
+  console.log(i);
+ 
+}
+
+
+// Question 122
+// Use a while loop to count down from 10 to 1 and breaks the loop when it reaches 5.
+console.log("\n");
+let counter:number=10;
+while (counter>0) {
+  if (counter===5){
+    break;     //skip 5 
+  }  
+  console.log(counter);
+  counter--
+}
+
+
+// Question 123
+// Create a loop that iterates through a string and stops when it finds the first vowel.
+console.log("\n");
+const vowel:string="aeiouAEIOU"
+function checkVowel(str:string){
+  for (const char of str) {
+    if(vowel.includes(char)){
+      console.log(`First vowel found "${char}"`);
+      break;
+    }
+    
+    console.log(char);
+  }
+}
+
+checkVowel("syzAgy")
+
+// Day 42
+// Question 124
+// Create a function inside an object that returns the objects own name property using the this keyword.
+console.log("\n");
+
+let person={
+  name:"sarfraz",
+  getName:function(){
+    return this.name
+  }
+
+}
+
+console.log(person.getName());
+
+
+// question 125
+// Modify a method in an object to use the this keyword to access another property in the same object.
+console.log("\n");
+let rectangleShape={
+  width:5,
+  length:4,
+  calculateArea: function(){
+    return this.width* this.length
+  }
+}
+
+console.log(rectangleShape.calculateArea());
+
+// Question 126
+// Explain how the this keyword changes its value when used inside a nested function within a method.
+console.log("\n");
+
+let obj=
+{
+  name: "sarfraz",
+  outerMethod:function(){
+    console.log(this.name);
+    
+    let innerMethod=()=>{
+      console.log(this.name);
+      
+    }
+    innerMethod()
+  } 
+
+}
+
+obj.outerMethod()
+
+
+// Day-43 of 100-Days-Of-Code Challenge
+// Question 127: Convert a traditional function expression to an arrow function.
+console.log("\n");
+const traditionalFunc=function (a:number , b:number){
+  return a + b
+}
+
+const arrowFunc=(a:number,b:number)=>a+b;
+
+console.log(traditionalFunc(5,2));
+console.log(arrowFunc(5,2));
+
+
+// Question 128: Create an arrow function that takes multiple parameters and returns the product of all parameters.
+console.log("\n");
+
+let multiplyParameters=(...a:number[]):number => a.reduce((total, number)=>total*number ,1);
+console.log(multiplyParameters(5 , 2 , 7));
+
+
+// Question 129: Explain how this behaves differently in arrow functions compared to traditional functions.
+console.log("\n");
+const traditionalFuncVsArrowFunc={
+  value: "traditional v/s arrow value",
+  traditionalFunc:function(){
+    console.log(this.value);
+  },
+  // ArrowFunc:()=>console.log(this.value);    Object is possibly 'undefined'
+}
+
+traditionalFuncVsArrowFunc.traditionalFunc()
+// traditionalFuncVsArrowFunc.ArrowFunc()
+
+
+// Day-44 of 100-Days-Of-Code Challenge
+// Question 130: Explain how to export a function from one JavaScript file and import it into another file.
+import {add, sub} from "./mathFunction.js";
+console.log("\n");
+
+// We can invoke a function that is created in a different file named mathFunction, and we can access the add function by importing it as a module."
+
+console.log(add(2,3))
+
+// Question 131: Create two modules; one that exports a class, and another that imports the class and creates an instance.
+console.log("\n");
+import { Person } from "./person.js";
+let sarfraz=new Person("Sarfraz");
+sarfraz.greet()
+
+
+// Question 132: Discuss the difference between default and named exports in JavaScript modules.
+
+//In named exports, we can import multiple modules using curly brackets. However, in default exports, we can only export one module per file, and curly brackets are not needed when importing the default export.
+
+//Defaul Export
+import Car from "./car.js";
+console.log("\n");
+const carStock=new Car("Toyota Corrola" , 1990 )
+carStock.stock();
+
+
+console.log(sub(3,3));
+
+
+// Day-45 of 100-Days-Of-Code Challenge
+// Question 133: Write a JavaScript object and convert it into a JSON string.
+console.log("\n");
+const personInfo={
+  name:"Sarfraz",
+  email:"abc@gmail.com",
+  numebr:123,
+  address: "abc street karachi"
+}
+
+let jsonString=  JSON.stringify(personInfo)
+console.log(jsonString);
+
+
+// Question 134: Take a JSON string and parse it into a JavaScript object.
+console.log("\n");
+
+let person1=JSON.parse(jsonString)
+console.log(person1);
+
+
+// Question 135: Explain how you can format a JSON string with proper indentation for readability.
+console.log("\n");
+
+const jsonString1=JSON.stringify(personInfo , null , 2) 
+console.log(jsonString1);
+
+//before
+//{"name":"Sarfraz","email":"abc@gmail.com","numebr":123,"address":"abc street karachi"}
+//after using null , 2
+//output
+// {
+//   "name": "Sarfraz",
+//   "email": "abc@gmail.com",
+//   "numebr": 123,
+//   "address": "abc street karachi"
+// }
+
+
+// Day-46 of 100-Days-Of-Code Challenge
+// Question 136: Use console.log() to debug and track the value of a variable inside a loop.
+console.log("\n");
+let friendsList=["sarfraz" , "saud" , "mustafa" , "rashid" , "khalid" , "noman"]
+
+for (let i = 0; i < friendsList.length; i++) {
+  
+  
+  const element = friendsList[i];
+  
+  console.log(`i value : ${i} , Element of friendlist : ${element}`);
+    
+}
+
+
+// Question 137: Implement a try-catch block to handle potential errors in a block of code.
+console.log("\n");
+try {
+  
+  throw new Error("Something went wrong created by 'sarfraz'");
+} catch (er) {
+  console.log(er); // 
+}
+
+// Question 138: Describe how to use breakpoints in browser developer tools to debug JavaScript code.
+console.log("\n");
+
+
+// console.log("Before breakpoint");
+// // Set a breakpoint on the following line using your browser's developer tools
+// console.log(
+//   "This line has a breakpoint set on it in the browser's developer tools"
+// );
+// console.log("After breakpoint");
+// To use breakpoints, open this code in your browser, open the developer tools, navigate to the Source tab, find this script, and click on the line number where you want to pause execution. When you reload or run your page, execution will pause at the breakpoint.
+
+let setA = () => {
+  return "25"
+};
+let setB = () => "A" 
+let init = () => {
+  let resultSet=""
+  
+  resultSet += setA();
+  resultSet += setB();
+  return resultSet;
+};
+
+console.log(init());
+
