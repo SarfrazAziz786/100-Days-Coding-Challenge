@@ -2080,3 +2080,138 @@ let init = () => {
 
 console.log(init());
 
+// Day-47 of 100-Days-Of-Code Challenge
+// Question 139: List three reserved words in JavaScript and create a valid use case for each.
+console.log("\n");
+// valid use cases for the reserved words 'const', 'if', and 'return'.
+//Reserve word : const use for block scope variable
+const number5=5
+
+//Reserve word : if use for condition 
+if (number5>2){
+  console.log("yes 5 greaterthan 2");
+}
+
+// Reserve word : return use for return the value from function
+let cal=(a:number,b:number):number=>{
+  return a+b
+}
+
+
+// Question 140: Explain the error that occurs when trying to use a reserved word as a variable name.
+console.log("\n");
+// let if=5  
+// Variable declaration not allowed at this location
+
+// const return=sarfraz
+// 'return' is not allowed as a variable declaration name
+
+console.log(
+  "Using a reserved word as a variable name causes a syntax error in JavaScript."
+);
+
+
+// Question 141: Discuss the significance of the await reserved word in asynchronous JavaScript.
+console.log("\n");
+
+// Example use of the 'await' reserved word in asynchronous JavaScript
+// async function fetchData() {
+//   // Assuming fetchSomething returns a Promise
+//   const data = await fetchSomething();
+//   console.log(data);
+//   // The 'await' keyword pauses the execution until the Promise settles, and then resumes with the resolved value.
+// }
+
+
+// console.log(
+//   "The 'await' keyword allows asynchronous, promise-based behavior to be written in a cleaner, more linear fashion."
+// );
+// // This demonstrates how 'await' improves readability and flow in asynchronous code.
+
+async function fetchData() {
+  await new Promise((resolve,reject) => {
+    setTimeout(() => {
+      reject("Loading failed")
+       
+    }, 3000);
+  }).catch((error)=>{console.log(error);
+  });
+}
+
+fetchData();
+
+
+// Day-48 of 100-Days-Of-Code Challenge
+// Question 142: Create a Promise that resolves with "Hello, World!" after 2 seconds.
+console.log("\n");
+
+// async/await approch
+async function helloWorld() {
+  const message =await new Promise((resolve,reject) => {
+    setTimeout(() => {
+      resolve("hello World!")
+       // Resolving the promise to indicate completion
+    }, 2000);
+  });
+  console.log(message);
+}
+
+helloWorld();
+
+//Promise Chaining approach:
+// // Creates a Promise that resolves with "Hello, World!" after 2 seconds
+// const helloPromise = new Promise<string>((resolve) => {
+//   setTimeout(() => {
+//     resolve("Hello, World!");
+//   }, 2000);
+// });
+
+// helloPromise.then((message) => console.log(message));
+// // After 2 seconds, "Hello, World!" will be logged to the console.
+
+
+
+// Question 143: Show how to use the .then() and .catch() methods to handle Promise resolution and rejection.
+console.log("\n");
+
+// Promise Chaining approach
+
+
+
+
+
+// Question 144: Explain the use of the Promise.all() method with an example.
+
+
+
+// Day-49 of 100-Days-Of-Code Challenge
+// Question 145: Create a function that accepts a callback and invokes it with some arguments.
+
+// Question 146: Show an example of a callback function used to filter an array of numbers.
+
+// Question 147: Explain how to handle errors in a callback pattern.
+
+
+
+// Day-50 of 100-Days-Of-Code Challenge
+// Question 148: Demonstrate the use of the setTimeout() function to execute code after a delay.
+
+// Question 149: Explain the concept of the event loop in JavaScript with an example.
+
+// Question 150: Describe how asynchronous callbacks differ from synchronous code execution.
+
+
+// Day-51 of 100-Days-Of-Code Challenge
+// Day-51 Task:  article reading
+
+//  article: Top 10 Programming Tips For Beginners
+// https://www.geeksforgeeks.org/programming-tips-for-beginners/
+
+
+
+// Day-52 of 100-Days-Of-Code Challenge
+// Day-52 Task: Read the following article: An Introduction to JavaScript
+
+// Let’s see what’s so special about JavaScript, what we can achieve with it, and what other technologies play well with it. This article will give you a brief overview of JavaScript and its capabilities. It’s a great starting point for beginners and a good refresher for experienced developers.
+
+//https://javascript.info/intro
